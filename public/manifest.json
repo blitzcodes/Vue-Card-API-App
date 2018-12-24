@@ -1,6 +1,6 @@
 {
-  "name": "vuetify",
-  "short_name": "vuetify",
+  "name": "vue-card-api-app",
+  "short_name": "vue-card-api-app",
   "icons": [
     {
       "src": "./img/icons/android-chrome-192x192.png",

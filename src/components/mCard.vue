@@ -17,8 +17,8 @@
       <v-container text-xs-center v-show="state.loading">
         <v-progress-circular
           class="m-card__content-loader"
-          :size="70"
-          :width="7"
+          :size="30"
+          :width="3"
           color="purple"
           indeterminate
           centered
@@ -204,9 +204,26 @@
 <style lang="scss">
   .m-card {
     width: 98%;
-    max-width: 98%;
+    max-width: 75%;
     display: inline-block;
     margin: 0 2rem 2rem;
+
+    @media screen and (min-width: 768px) {
+      max-width: 98%;
+    }
+
+    .v-card__text,
+    .v-card__title {
+      @media screen and (max-width: 768px) {
+        padding-top: 0 !important;
+      }
+    }
+
+    .v-card__text {
+      @media screen and (max-width: 768px) {
+        padding-bottom: 0 !important;
+      }
+    }
   }
 
   .m-card__content-loader {
@@ -216,6 +233,10 @@
   .m-card__content {
     font-size: 1.25rem;
     line-height: 1.33;
+
+    @media screen and (max-width: 768px) {
+      margin: 0 !important;
+    }
 
     span {
       display: block;
