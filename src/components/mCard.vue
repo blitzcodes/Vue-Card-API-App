@@ -203,7 +203,7 @@
 <style lang="scss">
   .m-card {
     width: 98%;
-    max-width: 75%;
+    max-width: 85%;
     display: inline-block;
     margin: 0 2rem 2rem;
 

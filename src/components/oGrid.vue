@@ -56,6 +56,7 @@
      */
     .o-grid__item {
       flex: 0 0 100%;
+      max-width: 100%;
 
       /*&.sortable-chosen {*/
       /*height: 3rem !important;*/
