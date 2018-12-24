@@ -31,7 +31,7 @@
     </v-card-text>
 
     <v-card-actions>
-      <v-tooltip bottom>
+      <v-tooltip top>
         <v-switch class="m-card__action-icon"
                   slot="activator"
                   color="primary"
