@@ -40,13 +40,10 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-
     max-width: 100%;
-    margin: 0 1rem;
 
     @media screen and (min-width: 768px) {
       max-width: 768px;
-      margin: 0 auto;
     }
     @media screen and (min-width: 1200px) {
       max-width: 1200px;
