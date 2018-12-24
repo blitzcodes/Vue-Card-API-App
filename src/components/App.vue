@@ -27,7 +27,7 @@
     <!--</v-navigation-drawer>-->
     <v-toolbar app fixed clipped-left>
       <!--<v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>-->
-      <v-toolbar-title>Card API App</v-toolbar-title>
+      <v-toolbar-title>Vue Card API App</v-toolbar-title>
     </v-toolbar>
     <v-content>
       <v-container fluid>
@@ -41,6 +41,7 @@
 </template>
 
 <script>
+  /* eslint-disable indent */
   import oGrid from './oGrid';
 
   export default {
