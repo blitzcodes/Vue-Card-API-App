@@ -1,7 +1,6 @@
 import Vue from 'vue';
 import App from './components/App.vue';
 import store from './store/store';
-import digest from './lib/CardApi';
 import './registerServiceWorker';
 
 /**
