@@ -1,6 +1,7 @@
 <template>
   <v-card class="m-card" v-bind="cardStatus">
     <v-progress-linear
+      class="m-card__timer"
       v-model="state.timeTillNextTick"
       :color="state.timeProgress"
       background-color="#666"
@@ -8,7 +9,9 @@
 
     <v-card-title primary-title>
       <div>
-        <div class="headline">{{ comp.title }}</div>
+        <div class="headline">
+          {{ comp.title }} <v-icon color="white">mdi-gesture-tap</v-icon>
+        </div>
         <span class="grey--text">{{ comp.tagline }}</span>
       </div>
     </v-card-title>
@@ -31,25 +34,21 @@
     </v-card-text>
 
     <v-card-actions>
-      <v-tooltip top>
-        <v-switch class="m-card__action-icon"
-                  slot="activator"
-                  color="primary"
-                  v-model="state.feedEnabled"
-        ></v-switch>
-        <span>Toggle Feed</span>
-      </v-tooltip>
-      <v-tooltip right v-show="state.feedEnabled">
-        <v-icon
-          class="m-card__action-icon"
-          slot="activator"
-          color="info"
-          dark
-          v-on:click="refreshFeed"
-        >mdi-refresh
-        </v-icon>
-        <span>Refresh Feed</span>
-      </v-tooltip>
+      <v-switch
+        class="m-card__action-icon"
+        slot="activator"
+        color="primary"
+        v-model="state.feedEnabled"
+      ></v-switch>
+      <v-icon
+        class="m-card__action-icon"
+        slot="activator"
+        color="info"
+        dark
+        v-on:click="refreshFeed"
+        v-show="state.feedEnabled"
+      >mdi-refresh
+      </v-icon>
 
       <v-spacer></v-spacer>
       <v-btn icon @click="state.showResponse = !state.showResponse" v-show="state.feedEnabled && !state.loading">
@@ -212,6 +211,10 @@
       max-width: 98%;
     }
 
+    .headline {
+      cursor: pointer;
+    }
+
     .v-card__text,
     .v-card__title {
       @media screen and (max-width: 768px) {
@@ -243,8 +246,16 @@
     }
   }
 
+  .m-card__timer {
+    margin-top: 0 !important;
+  }
+
   .m-card__action-icon {
-    margin-left: 1rem;
+    &,
+    &.v-input {
+      margin-left: 1rem;
+      flex: 0 0 45px;
+    }
   }
 
   .m-card__data-name {

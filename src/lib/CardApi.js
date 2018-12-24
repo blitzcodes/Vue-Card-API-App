@@ -3,33 +3,39 @@ import { isFunction, assign } from 'lodash';
 import { uuid } from 'lodash-uuid';
 
 // APIs
+import cats from './apis/cats';
 import chuckNorris from './apis/chuckNorris';
 import starWars from './apis/starWars';
 import tacos from './apis/tacos';
 import iss from './apis/iss';
 import numbers from './apis/numbers';
 import advice from './apis/advice';
+import jservice from './apis/jservice';
 
 // Store
 import store from '@/store/store';
 
 const CardApiEnum = {
+  cats: 'cats',
   chuckNorris: 'chuckNorris',
   starWars: 'starWars',
   tacos: 'tacos',
   iss: 'iss',
   numbers: 'numbers',
   advice: 'advice',
+  jservice: 'jservice',
 };
 
 class ApiDigest {
   apis = {
+    cats,
     chuckNorris,
     starWars,
     tacos,
     iss,
     numbers,
     advice,
+    jservice,
   };
 
   constructor() {

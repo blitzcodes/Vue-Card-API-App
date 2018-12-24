@@ -5,7 +5,7 @@ export default {
     const data = {
       title: 'Know Your Numbers',
       tagline: 'Did you know?',
-      content: res,
+      content: `${res}`,
     };
     return data;
   },

@@ -1,8 +1,7 @@
 <template>
-  <draggable class="o-grid" v-model='cardList'>
+  <draggable class="o-grid" v-model='cardList' :options="{handle:'.v-card__title'}">
     <div class="o-grid__item" v-for="card in cardList" :key="card.id">
-
-        <m-card :initialData="card"></m-card>
+      <m-card :initialData="card"></m-card>
     </div>
   </draggable>
 </template>
@@ -61,10 +60,10 @@
     .o-grid__item {
       flex: 0 0 100%;
 
-      &.sortable-chosen {
-        height: 3rem !important;
-        width: 3rem !important;
-      }
+      /*&.sortable-chosen {*/
+      /*height: 3rem !important;*/
+      /*width: 3rem !important;*/
+      /*}*/
 
       @media screen and (min-width: 768px) {
         flex: 0 0 50%;
